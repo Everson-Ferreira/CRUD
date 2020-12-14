@@ -42,7 +42,7 @@ public class AcademicoDaoImpl implements Serializable {
             academico.setId(resultSet.getInt(1));
 
         } catch (SQLException eSQL) {
-            System.err.println("Erro ao salvar pessoa " + eSQL.getMessage());
+            System.err.println("Erro ao salvar Academico " + eSQL.getMessage());
         }
     }
 
@@ -62,7 +62,7 @@ public class AcademicoDaoImpl implements Serializable {
             preparando.executeUpdate();
 
         } catch (SQLException e) {
-            System.err.println("Erro ao alterar pessoa " + e.getMessage());
+            System.err.println("Erro ao alterar Academico " + e.getMessage());
 
         }
     }
@@ -70,7 +70,7 @@ public class AcademicoDaoImpl implements Serializable {
     public void excluir(Integer id) throws SQLException {
         try {
             conexao = FabricaConexao.abrirConexao();
-            preparando = conexao.prepareStatement("DELETE FROM academico WHERE id = ?");
+            preparando = conexao.prepareStatement("DELETE FROM academico WHERE cdMatricula = ?");
             preparando.setInt(1, id);
             preparando.executeUpdate();
         } catch (SQLException e) {
@@ -83,7 +83,7 @@ public class AcademicoDaoImpl implements Serializable {
     public Academico pesquisarPorId(Integer id) throws SQLException {
         Academico academico = null;
 
-        String consulta = "SELECT * FROM academico where = ?";
+        String consulta = "SELECT * FROM academico where cdMatricula = ?";
 
         try {
             conexao = FabricaConexao.abrirConexao();

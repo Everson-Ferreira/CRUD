@@ -88,7 +88,7 @@ public class BibliotecarioDaoImpl implements Serializable {
     public Bibliotecario pesquisarPorId(Integer id) throws SQLException {
         Bibliotecario bibliotecario = null;
 
-        String consulta = "SELECT * FROM academico where = ?";
+        String consulta = "SELECT * FROM academico where cdBibliotecario = ?";
 
         try {
             conexao = FabricaConexao.abrirConexao();

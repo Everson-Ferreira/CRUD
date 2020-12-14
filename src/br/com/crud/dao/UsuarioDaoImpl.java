@@ -89,7 +89,7 @@ public class UsuarioDaoImpl implements Serializable{
     public Usuario pesquisarPorId(Integer id) throws SQLException {
         Usuario usuario = null;
 
-        String consulta = "SELECT * FROM usuario where = ?";
+        String consulta = "SELECT * FROM usuario where cdUsuario = ?";
 
         try {
             conexao = FabricaConexao.abrirConexao();

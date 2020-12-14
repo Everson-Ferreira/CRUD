@@ -13,15 +13,14 @@ import java.io.Serializable;
  */
 public class Autores implements Serializable{
     private Integer idAutor;
-    private Integer idLivro;
+    
     private String nome;
 
     public Autores() {
     }
 
-    public Autores(Integer idAutor, Integer idLivro, String nome) {
+    public Autores(Integer idAutor, String nome) {
         this.idAutor = idAutor;
-        this.idLivro = idLivro;
         this.nome = nome;
     }
 
@@ -33,14 +32,6 @@ public class Autores implements Serializable{
         this.idAutor = idAutor;
     }
 
-    public Integer getIdLivro() {
-        return idLivro;
-    }
-
-    public void setIdLivro(Integer idLivro) {
-        this.idLivro = idLivro;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -48,6 +39,8 @@ public class Autores implements Serializable{
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    
 
     
     
