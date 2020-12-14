@@ -34,9 +34,9 @@ public class UsuarioDaoImpl implements Serializable{
             preparando.setString(3, usuario.getLogin());
             preparando.setString(4, usuario.getSenha());
             preparando.setString(5, usuario.getLogradoudo());
-            preparando.setString(5, usuario.getCidade());
-            preparando.setString(5, usuario.getEstado());
-            preparando.setString(5, usuario.getCep());
+            preparando.setString(6, usuario.getCidade());
+            preparando.setString(7, usuario.getEstado());
+            preparando.setString(8, usuario.getCep());
             
             preparando.executeUpdate();
             resultSet = preparando.getGeneratedKeys();
@@ -60,9 +60,9 @@ public class UsuarioDaoImpl implements Serializable{
             preparando.setString(3, usuario.getLogin());
             preparando.setString(4, usuario.getSenha());
             preparando.setString(5, usuario.getLogradoudo());
-            preparando.setString(5, usuario.getCidade());
-            preparando.setString(5, usuario.getEstado());
-            preparando.setString(5, usuario.getCep());           
+            preparando.setString(6, usuario.getCidade());
+            preparando.setString(7, usuario.getEstado());
+            preparando.setString(8, usuario.getCep());           
 
             preparando.setInt(1, usuario.getId());
             preparando.executeUpdate();

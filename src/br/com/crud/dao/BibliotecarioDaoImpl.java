@@ -98,13 +98,13 @@ public class BibliotecarioDaoImpl implements Serializable {
 
             bibliotecario = new Bibliotecario();
             bibliotecario.setId(id);
-            bibliotecario.setNome(resultSet.getString("login"));
-            bibliotecario.setNome(resultSet.getString("senha"));
+            bibliotecario.setLogin(resultSet.getString("login"));
+            bibliotecario.setSenha(resultSet.getString("senha"));
             bibliotecario.setNome(resultSet.getString("nome"));
-            bibliotecario.setNome(resultSet.getString("logradouro"));
-            bibliotecario.setNome(resultSet.getString("cidade"));
-            bibliotecario.setNome(resultSet.getString("estado"));
-            bibliotecario.setNome(resultSet.getString("cep"));
+            bibliotecario.setLogradouro(resultSet.getString("logradouro"));
+            bibliotecario.setCidade(resultSet.getString("cidade"));
+            bibliotecario.setEstado(resultSet.getString("estado"));
+            bibliotecario.setCep(resultSet.getString("cep"));
             
 
         } catch (SQLException e) {
